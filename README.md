@@ -23,25 +23,67 @@ Built as per the task requirements in the provided PDF .
 
 ## 📁 Project Structure
 
+Here’s a clean **Project Structure** section you can paste directly into your `README.md`.
+
+---
+
+## 📁 Project Structure
+
+```
 d2c-admin-tool/
 ├── config/
-│   └── database.js          # MongoDB connection
+│   └── database.js          # Establishes MongoDB connection using Mongoose
+│
 ├── controllers/
-│   ├── brandController.js  # Brand logic
-│   └── noteController.js   # Notes logic
+│   ├── brandController.js  # Business logic for brands (create, list, status, summary)
+│   └── noteController.js   # Logic for adding notes to brands
+│
 ├── middleware/
-│   └── validator.js        # Validation rules
+│   └── validator.js        # Request validation for brands and notes
+│
 ├── models/
-│   ├── Brand.js            # Brand schema
-│   └── Note.js             # Note schema
+│   ├── Brand.js            # Brand schema with status flow and timestamps
+│   └── Note.js             # Note schema linked to a brand
+│
 ├── routes/
-│   └── api.js              # API endpoints
+│   └── api.js              # All API endpoint definitions
+│
 ├── frontend/
-│   ├── index.html          # Dashboard UI
-│   ├── styles.css
-│   └── script.js
-├── .env
-└── server.js               # Entry point
+│   ├── index.html          # Admin dashboard UI
+│   ├── styles.css          # Dashboard styling
+│   └── script.js           # Frontend logic & API calls
+│
+├── .env                    # Environment variables (Mongo URI, Port)
+└── server.js               # Application entry point (Express server)
+```
+
+---
+
+### 🧩 Folder Responsibilities
+
+| Folder/File    | Responsibility                                       |
+| -------------- | ---------------------------------------------------- |
+| `server.js`    | Starts server, connects DB, serves frontend and APIs |
+| `config/`      | Database connection setup                            |
+| `models/`      | Mongoose schemas representing database collections   |
+| `controllers/` | Core application logic                               |
+| `routes/`      | Maps URLs to controllers                             |
+| `middleware/`  | Validations before hitting controllers               |
+| `frontend/`    | Dashboard UI connected to backend APIs               |
+| `.env`         | Configuration without hardcoding secrets             |
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## ⚙️ Features Implemented
