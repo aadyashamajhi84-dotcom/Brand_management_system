@@ -23,7 +23,6 @@ Built as per the task requirements in the provided PDF .
 
 ## 📁 Project Structure
 
-
 d2c-admin-tool/
 ├── config/
 │   └── database.js          # MongoDB connection
@@ -43,9 +42,7 @@ d2c-admin-tool/
 │   └── script.js
 ├── .env
 └── server.js               # Entry point
-```
 
----
 
 ## ⚙️ Features Implemented
 
