@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D2C Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>D2C Brand Dashboard</h1>
+
+    <section>
+        <h2>Create Brand</h2>
+        <input id="brand_name" placeholder="Brand Name">
+        <input id="founder_name" placeholder="Founder Name">
+        <input id="category" placeholder="Category">
+        <input id="monthly_revenue" type="number" placeholder="Monthly Revenue">
+        <input id="website" placeholder="Website">
+        <button onclick="createBrand()">Create</button>
+    </section>
+
+    <section>
+        <h2>Brands</h2>
+        <button onclick="loadBrands()">Refresh</button>
+        <table id="brandsTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Founder</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
